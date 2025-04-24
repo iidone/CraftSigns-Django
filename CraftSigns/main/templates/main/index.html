@@ -1,0 +1,199 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    CraftSigns - Главная
+{% endblock %}
+
+{% block content %}
+    <hr class="main-hr">
+    <div class="logo-text">
+        <p class="pouring-a">
+        C R A F T
+        </p>
+        <p class="pouring-b">
+        S I G N S
+        </p>
+    </div>
+    <div class="photos-menu">
+        <div class="photos-img imgClass">
+            <a href="{% url 'production' %}">
+                <img class="imgs" src="{% static 'main/images/prod.jpg' %}" alt="prod-img">
+                <h2>Производство</h2>
+            </a>
+        </div>
+        <div class="photos-img imgClass">
+            <a href="{% url 'services' %}">
+                <img class="imgs" src="{% static 'main/images/services.jpg' %}" alt="serv-img">
+                <h2>Услуги</h2>
+            </a>
+        </div>
+        <div class="photos-img imgClass">
+            <a href="{% url 'contacts' %}">
+                <img class="imgs" src="{% static 'main/images/contacts.jpg' %}" alt="cont-img">
+                <h2>Контакты</h2>
+            </a>
+        </div>
+        <div class="photos-img imgClass">
+            <a href="{% url 'our_works' %}">
+                <img class="imgs" src="{% static 'main/images/ourworks.jpg' %}" alt="wrks-img">
+                <h2>Наши работы</h2>
+            </a>
+        </div>
+    </div>
+    <div>
+        <hr class="main-hr">
+    </div>
+    <div>
+        <h1 class="title">
+            Наш подход к каждому клиенту уникален. Мы опираемся на 3 основы:
+        </h1>
+    </div>
+    <div class="main-info">
+        <ol class="ol-list">
+            <hr class="open-close-hr">
+            <li class="pros">
+                <h2>
+                    Приём заявки
+                </h2>
+                <p class="description">
+                    Craftsigns предлагает варианты решения и эскизы будущей наружной рекламы.
+                </p>
+            </li>
+            <hr>
+            <li class="pros">
+                <h2>
+                    Изготовление эскиза
+                </h2>
+                <p class="description">
+                    Мы выполняем заказ в установленные заранее сроки и подходим к каждому заказу внимательно, ответственно.
+                </p>
+            </li>
+            <hr>
+            <li class="pros">
+                <h2>
+                    Заключение договора
+                </h2>
+                <p class="description">
+                    После изготовления заказчик оценивает нашу работу и остаётся доволен, ведь мы не ложаем.
+                </p>
+            </li>
+            <hr class="open-close-hr">
+        </ol>
+    </div>
+    <hr class="main-hr">
+    <div class="logo-text">
+        <p class="pouring-a">
+        П О Ч Е М У
+        </p>
+        <p class="pouring-c">
+            И М Е Н Н О
+        </p>
+        <p class="pouring-b">
+        М Ы ?
+        </p>
+    </div>
+    <div class="why-us-block">
+        <h2>
+            Почему нас выбирают?
+        </h2>
+        <p>
+            При самом первом обращении в компанию CraftSigns, Вы сразу же поймёте, что имеете дело с 
+            настоящими профессионалами рекламного производства.
+            <br>
+            <br>
+            Сроки установок рекламных конструкций всегда соответствуют договору.
+            <br>
+            <br>
+            В случае, если по каким-либо причинам монтаж задерживается (задержка с поставщиками, 
+            дорожная ситуация или другие форс-мажорные обстоятельства),
+            с Вами обязательно заранее свяжется менеджер Вашего проекта и обсудит время установки.
+            
+        </p>
+    </div>
+    <div class="why-us-block wub-2">
+        <h2>
+            Мы и наши клиенты
+        </h2>
+        <p>
+            Рекламно-производственная компания CraftSigns всегда исполняет свои гарантийные обязательства. 
+            Достаточно одного звонка в наш офис или одного сообщения через Интернет, и с Вами немедленно свяжется менеджер. После уточнения причины неполадки, к вам отправят бригаду для ремонта. 
+            В течении одного-двух дней все неисправности будут устранены.
+            <br>
+            <br>
+            Компания CraftSigns делает всё для удобства клиентов. 
+            Поэтому мы не только занимаемся изготовлением рекламных конструкций, но и предоставляем дополнительные услуги. 
+            Обратившись к нам, Вам не придётся искать отдельную бригаду монтажников или транспорт для перевозки заказанных изделий. 
+            Всё это организуем мы сами. Причём стоимость таких работ мы сделали максимально низкой.
+        </p>
+    </div>
+    <div class="why-us-block wub-3">
+        <h2>
+            Наша репутация
+        </h2>
+        <p>
+            Компания CraftSigns имеет у своих постоянных клиентов репутацию надежного и добросовестного партнёра. 
+            Новые заказчики, обратившись к нам, при необходимости повторно с удовольствием прибегают к услугам нашей компании.
+            <br>
+            <br>
+            Огромный опыт, накопленный нами в сфере рекламного производства, предоставление полного цикла услуг, безукоризненное исполнение гарантий — всё это выгодно отличает компанию CraftSigns от конкурентов. 
+            <br>
+            <br>
+            Обратившись к нам один раз, Вы обязательно оцените уровень сервиса и цен, предлагаемых нами.
+        </p>
+    </div>
+    <div>
+        <hr class="main-hr">
+    </div>
+    <div class="logo-text">
+        <p class="pouring-a">
+        Н А Ш И
+        </p>
+        <p class="pouring-c">
+            П О С Т О Я Н Н Ы Е
+        </p>
+        <p class="pouring-b">
+            К Л И Е Н Т Ы 
+        </p>
+    </div>
+    <div class="usually-clients">
+        <div class="client">
+            <div class="block-h2">
+                <h2>
+                    Папа Джонс
+                </h2>
+            </div>
+            <div class="block-p">
+                <p>
+                    "Папа Джонс" часто заказывают у CraftSigns световые баннеры наружу и внутрь помещения. Также, смотря на актуальность, мы делаем для Папа Джонс неоновые вывески внутрь здания. 
+                    <br>
+                    <br>
+                    Каждый раз пиццерии "Папа Джонс" остаются довольными нашей работой, и позже связываются с CraftSigns снова.
+                </p>
+            </div>
+            <div class="client-img">
+                <img class="client-image" src="{% static 'main/images/papajons.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="client">
+            <hr class="hr-center">
+        </div>
+        <div class="client">
+            <div class="block-h2">
+                <h2>
+                    Чёрная Кость
+                </h2>
+            </div>
+            <div class="block-p">
+                <p>
+                    Мы неоднократно делали световые баннеры для барбершопа "Чёрная Кость". Снова и снова наш постоянный клиент остаётся довольным работой CraftSigns.
+                </p>
+            </div>
+            <div class="client-img">
+                <img class="client-image" src="{% static 'main/images/blackbone.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <hr class="main-hr">
+</div>
+{% endblock %}

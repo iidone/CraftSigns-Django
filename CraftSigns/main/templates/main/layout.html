@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'main/images/csicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet"  href="{% static 'main/css/main.css' %}">
+    <script src="{% static 'main/js/main.js' %}"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <style>
+        :root {
+            --bg-image: url("{% static 'main/images/bg1.jpg' %}");
+        }
+    </style>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <aside id="aside">
+        <div class="logo">
+            <a class="link" href="{% url 'home' %}">
+            <h1 class="craft">C R A F T </h1>
+            <h1 class="signs">S I G N S</h1></a>
+        </div>
+
+        <ul>
+            <a class="link" href="{% url 'home' %}"><li>Главная</li></a>
+            <a class="link" href="{% url 'production' %}"><li>Производство</li></a>
+            <a class="link" href="{% url 'services' %}"><li>Услуги</li></a>
+            <a class="link" href="{% url 'contacts' %}"><li>Контакты</li></a>
+            <a class="link" href="{% url 'our_works' %}"><li>Наши работы</li></a>
+        </ul>
+        <h2 class="phone">
+            +7 (985) 767-15-57
+        </h2>
+        <div class="whatsapp-icon-container">
+            <a href="https://www.flaticon.com/ru/free-icons/whatsapp" title="whatsapp иконки"><img class="links-icon" src="{% static 'main/images/whatsapp.png' %}" alt=""></a>
+        </div>
+        <div class="telegram-icon-container">
+            <a href="https://www.flaticon.com/ru/free-icons/" title="телеграмм иконки"><img class="links-icon" src="{% static 'main/images/telegram.png' %}" alt=""></a>
+        </div>
+    </aside>
+    <main>
+        
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>

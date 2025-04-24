@@ -1,0 +1,42 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    CraftSigns - Услуги
+{% endblock %}
+
+{% block content %}
+    <hr class="main-hr">
+    <div class="logo-text">
+        <p class="pouring-a ind">
+        Н А Ш И 
+        </p>
+        <p class="pouring-b ind">
+        У С Л У Г И
+        </p>
+    </div>
+    <div>
+        {% for article in Services %}
+        <a href="{% url 'contacts' %}?product={{ article.name }}">
+            <div class="service-block">
+                <img class="service-img" src="{{ article.image.url }}" alt="">
+                <div class="service-text">
+                    <h1>
+                        {{ article.name }}
+                    </h1>
+                    <br>
+                    <p>
+                        {{ article.description }}
+                    </p>
+                
+                </div>
+                <div class="service-text-click">
+                    <h1>
+                        Нажмите, чтобы отправить заявку
+                    </h1>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}
