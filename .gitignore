@@ -1,0 +1,17 @@
+# Ignore database file
+db.sqlite3
+
+# Ignore Django debug log
+django_debug.log
+
+# Ignore media files
+media/
+
+# Ignore environment variables file
+.env
+
+# Ignore virtual environment
+venv/
+
+# Ignore IDE config files
+.idea/

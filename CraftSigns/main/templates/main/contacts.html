@@ -1,0 +1,66 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    CraftSigns - Контакты
+{% endblock %}
+
+{% block content %}
+    <hr class="main-hr">
+    <div class="logo-text">
+        <p class="pouring-a">С В Я Ж И С Ь</p>
+        <p class="pouring-c">С</p>
+        <p class="pouring-b">Н А М И</p>
+    </div>
+    <div class="connect-form">
+        <form action="{% url 'contacts' %}" id="connectFormId" method="post">
+            {% csrf_token %}
+            <input class="input-field" 
+            pattern="^[А-Яа-яЁё\s]+$" 
+            type="text" 
+            name="name" 
+            onkeypress="return isNotNumber(event)"
+            placeholder="Ваше имя" 
+            required>
+            <input class="input-field" 
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+            type="email" 
+            name="email" 
+            placeholder="Ваша почта" 
+            required>
+            <input class="input-field" 
+            id="phone" 
+            name="phone" 
+            type="tel" 
+            placeholder="+7(___)___-__-__" 
+            required>
+            <select class="select-product" id="productSelect" name="productionSelect" form="connectFormId" required>
+                <option value="" disabled selected hidden>Выберите продукт</option>
+                {% if selected_product %}
+                    <option value="{{ selected_product }}" selected>{{ selected_product }}</option>
+                {% endif %}
+                
+                {% for product in products %}
+                    {% if product != selected_product %}
+                        <option value="{{ product }}">{{ product }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <button class="submit-form-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="contacts">
+        <h1>Телефон: +7 (985) 767-15-57</h1>
+    </div>
+    <hr class="main-hr">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var element = document.getElementById('phone');
+            var maskOptions = {
+                mask: '+7(000)000-00-00',
+                lazy: false
+            };
+            var mask = new IMask(element, maskOptions);
+        });
+    </script>
+{% endblock %}
